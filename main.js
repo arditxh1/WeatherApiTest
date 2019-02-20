@@ -1,0 +1,56 @@
+var vdata;
+var name;
+var day;
+var temp;
+var weather;
+var image;
+var num = 0;
+var url = "http://api.apixu.com/v1/current.json?key=07d38d8c80de4e05bd7154700191302&q=";
+var myDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+var realdate = new Date();
+var date = realdate.getDate()
+var month = months[realdate.getMonth()]
+var year = realdate.getFullYear()
+
+$('#textbox').keypress(function(event){
+	var keycode = (event.keyCode ? event.keyCode : event.which);
+	if(keycode == '13'){
+		getData()
+	}
+});
+
+function getData(City){
+	$.getJSON(url + $('input').val(), function(data){
+	  	vdata = data
+	  	name = data && data.location ? data.location.country: null;
+	  	temp = data && data.current ? data.current.temp_c: null;
+	    weather = data && data.current && data.current.condition ? data.current.condition.text : null;
+	    image = data && data.current && data.current.condition ? data.current.condition.icon : null;
+	    RIamge = 'http'+image
+	    setTimeout(ReplaceData, 100)
+	});
+}
+
+function ReplaceData(){
+	num += 1;
+	$('#img-text').text(weather);
+	$('#city').text(name)
+	$('#Degre').text(temp+'C')
+	$('#Week-Day').text(myDays[realdate.getDay()])
+	$('#date').text(date + ' ' + month + ' ' + year)
+	$('#img').attr("src",'http:'+image)
+	$("#weather").clone().appendTo( "#weather_sort").attr("id", num);
+	$('#' + num).draggable();
+	$('#x').click(function () {
+    if ($(this).hasClass('dragging')) {
+        $(this).removeClass('dragging');
+    } else {
+            alert("real click");
+        $("#content").toggle();
+    }
+});
+	$('#' + num).show();
+}
+
+
