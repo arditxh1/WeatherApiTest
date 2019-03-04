@@ -17,13 +17,14 @@ $('#textbox').keypress(function(event){
 	var keycode = (event.keyCode ? event.keyCode : event.which);
 	if(keycode == '13'){
 		getData()
+		$('#textbox').val('')
 	}
 });
 
 function getData(City){
 	$.getJSON(url + $('input').val(), function(data){
 	  	vdata = data
-	  	name = data && data.location ? data.location.country: null;
+	  	name = data && data.location ? data.location.name: null;
 	  	temp = data && data.current ? data.current.temp_c: null;
 	    weather = data && data.current && data.current.condition ? data.current.condition.text : null;
 	    image = data && data.current && data.current.condition ? data.current.condition.icon : null;
@@ -40,17 +41,11 @@ function ReplaceData(){
 	$('#Week-Day').text(myDays[realdate.getDay()])
 	$('#date').text(date + ' ' + month + ' ' + year)
 	$('#img').attr("src",'http:'+image)
-	$("#weather").clone().appendTo( "#weather_sort").attr("id", num);
+	$("#weather").clone(true).appendTo( "#weather_sort").attr("id", num);
 	$('#' + num).draggable();
-	$('#x').click(function () {
-    if ($(this).hasClass('dragging')) {
-        $(this).removeClass('dragging');
-    } else {
-            alert("real click");
-        $("#content").toggle();
-    }
-});
 	$('#' + num).show();
 }
 
-
+$("#x").bind('click', function(){
+	$(this).parent().parent().remove()
+})

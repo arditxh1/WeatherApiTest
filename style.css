@@ -1,4 +1,5 @@
-html{
+html
+{
 	display: block;
 	height: 100%;
 	width: 100%;
@@ -6,8 +7,9 @@ html{
 	background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
-h1{
-	font-family: Bebas Neue;
+h1
+{
+	font-family: 'Lato', sans-serif;
 	margin: 0px;
 	color: white;
 	font-weight: 200;
@@ -19,7 +21,8 @@ h1{
 	display: none;
 }
 
-#weather_css{
+#weather_css
+{
 	width: 400px;
 	height: 300px;
 	background-color: #38a7c2;
@@ -31,7 +34,8 @@ h1{
 	margin: 30px;
 }
 
-#top-bar{
+#top-bar
+{
 	background-color: #333333;
 	padding: 4px 0px 10px 10px;
 	display: flex;
@@ -40,14 +44,16 @@ h1{
 }
 
 
-#main-text{
+#main-text
+{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-#bot-bar{
+#bot-bar
+{
 	display: flex;
 	flex-direction: row;
 	font-size: 12px;
@@ -58,50 +64,60 @@ h1{
 	width: 370px;
 }
 
-#Week-Day{
+#Week-Day
+{
 	font-size: 35px;
 }
 
-#Degre{
+#Degre
+{
 	font-size: 80px;
 }
 
-#main{
+#main
+{
 	display: flex;
 	justify-content: space-between;
 }
 
-#center{
+#center
+{
 	display: flex;
 	justify-content: center;
 }
 
-#img{
+#img
+{
 	width: 160px;
 	height: 160px;
 }
 
-#date{
+#date
+{
 	display: flex;
 	justify-content: center;
 	width: 50%;
 }
 
-#img-text{
+#img-text
+{
 	width: 50%;
 	display: flex;
 	justify-content: center;
 }
 
-#img-div{
+#img-div
+{
 	width: 50%;
 }
 
-#main-text{
+#main-text
+{
 	width: 50%;
 }
 
-input{
+input
+{
 	width: 800px;
 	height: 50px;
 	background-color: white;
@@ -110,20 +126,23 @@ input{
 	box-shadow: 4px 4px 15px 0px;
 }
 
-input[type=text]{
-	font-family: Bebas Neue;
+input[type=text]
+{
+	font-family: 'Lato', sans-serif;
 	padding-left: 20px;
 	font-size: 25px;
 	letter-spacing: 2px;
 }
 
-::placeholder{
-	font-family: Bebas Neue;
+::placeholder
+{
+	font-family: 'Lato', sans-serif;
 	font-size: 25px;
 	letter-spacing: 2px;
 }
 
-#Div_Input{
+#Div_Input
+{
 	margin-top: 30px;
 	display: flex;
 	justify-content: center;
@@ -131,13 +150,15 @@ input[type=text]{
 }
 
 
-#x{
+#x
+{
 	width: 20px;
 	height: 20px;
 	margin-right: 10px;
 }
 
-#weather_sort{
+#weather_sort
+{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
