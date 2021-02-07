@@ -5,7 +5,7 @@ var temp;
 var weather;
 var image;
 var num = 0;
-var url = "http://api.apixu.com/v1/current.json?key=07d38d8c80de4e05bd7154700191302&q=";
+var url = "//api.apixu.com/v1/current.json?key=07d38d8c80de4e05bd7154700191302&q=";
 var myDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
 var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 var realdate = new Date();
