@@ -5,7 +5,7 @@ var temp;
 var weather;
 var image;
 var num = 0;
-var url = "http://api.weatherstack.com/current?access_key=86df7fce18a67bb93bd054c46d5280ab&query="
+var url = "//api.weatherstack.com/current?access_key=86df7fce18a67bb93bd054c46d5280ab&query="
 var myDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
 var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 var realdate = new Date();
